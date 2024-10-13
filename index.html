@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Reservation System</h1>
+        <div class="menu">
+            <button onclick="showAdminMenu()">Admin</button>
+            <button onclick="showUserMenu()">User</button>
+        </div>
+
+        <div id="adminMenu" class="menu-section hidden">
+            <h2>Admin Menu</h2>
+            <label>From: <input type="text" id="fromAirport"></label>
+            <label>To: <input type="text" id="toAirport"></label>
+            <label>Cost: <input type="number" id="flightCost"></label>
+            <button onclick="addFlight()">Add Flight</button>
+            <button onclick="viewFlights()">View Flights</button>
+            <button onclick="backToMain()">Back</button>
+            <div id="flightsList"></div>
+        </div>
+
+        <div id="userMenu" class="menu-section hidden">
+            <h2>User Menu</h2>
+            <label>From: <input type="text" id="searchFrom"></label>
+            <label>To: <input type="text" id="searchTo"></label>
+            <button onclick="searchFlight()">Search</button>
+            <button onclick="viewFlights()">View Flights</button>
+            <button onclick="backToMain()">Back</button>
+            <div id="searchResult"></div>
+            <div id="flightsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
